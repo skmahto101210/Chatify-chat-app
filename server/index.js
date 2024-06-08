@@ -12,7 +12,11 @@ dotenv.config({
 });
 
 const app = express();
-app.use(cors());
+app.use(
+  cors({
+    origin: "https://chatify-chat-app-client.vercel.app",
+  })
+);
 app.use(express.json());
 // app.use(express.static());
 
@@ -37,7 +41,7 @@ connectDB()
 
     const io = new Server(server, {
       cors: {
-        origin: "http://localhost:5173",
+        origin: "https://chatify-chat-app-client.vercel.app",
       },
       pingTimeout: 60000, // Increase timeout
       // pingInterval: 25000, // Increase ping interval
@@ -62,10 +66,10 @@ connectDB()
         if (!chat.users) {
           return console.log("chat.users not defined");
         }
-        console.log(newMessageStatus)
+        console.log(newMessageStatus);
         // chat.users.forEach((user) => {
-          // if (user._id === newMessageStatus.sender._id) return;
-          socket.broadcast.emit("message received", newMessageStatus);
+        // if (user._id === newMessageStatus.sender._id) return;
+        socket.broadcast.emit("message received", newMessageStatus);
         // });
       });
 
