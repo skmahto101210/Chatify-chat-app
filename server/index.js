@@ -41,7 +41,7 @@ connectDB()
 
     const io = new Server(server, {
       cors: {
-        origin: "https://chatify-chat-app-client.vercel.app",
+        origin: "https://localhost:5173",
       },
       pingTimeout: 60000, // Increase timeout
       // pingInterval: 25000, // Increase ping interval
