@@ -14,7 +14,7 @@ dotenv.config({
 const app = express();
 app.use(
   cors({
-    origin: "https://chatify-chat-app-client.vercel.app",
+    origin: "*",
   })
 );
 app.use(express.json());
