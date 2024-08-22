@@ -151,7 +151,7 @@ export default function Login() {
               type="submit"
               onClick={handleClick(SlideTransition)}
               className="mt-3 p-2 text-slate-500 hover:text-slate-800">
-              LOGIN
+              LOG IN
             </button>
           </form>
           <p
@@ -159,7 +159,7 @@ export default function Login() {
             onClick={() => navigate("/sign-up")}>
             Don't have an Account?{" "}
             <span className="underline text-purple-600  cursor-pointer">
-              Sigh Up
+              Sign Up
             </span>
           </p>
         </div>
