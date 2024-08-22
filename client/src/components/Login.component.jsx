@@ -151,7 +151,7 @@ export default function Login() {
               type="submit"
               onClick={handleClick(SlideTransition)}
               className="mt-3 p-2 text-slate-500 hover:text-slate-800">
-              LOGiN
+              LOGIN
             </button>
           </form>
           <p
